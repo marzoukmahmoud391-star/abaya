@@ -406,10 +406,46 @@ export default function AbayaStore() {
         <nav>
           <div className="nav-logo">{tx.logo}</div>
           <div className="nav-links">
-            <a href="#">{tx.nav.home}</a>
-            <a href="#">{tx.nav.collections}</a>
-            <a href="#">{tx.nav.new}</a>
-            <a href="#">{tx.nav.contact}</a>
+            <button
+              className="nav-btn"
+              onClick={() =>
+                document
+                  .getElementById("home")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              {tx.nav.home}
+            </button>
+            <button
+              className="nav-btn"
+              onClick={() =>
+                document
+                  .getElementById("collections")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              {tx.nav.collections}
+            </button>
+            <button
+              className="nav-btn"
+              onClick={() =>
+                document
+                  .getElementById("new")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              {tx.nav.new}
+            </button>
+            <button
+              className="nav-btn"
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              {tx.nav.contact}
+            </button>
             <button className="license-btn" onClick={openLicense}>
               📄 {tx.nav.license}
             </button>
